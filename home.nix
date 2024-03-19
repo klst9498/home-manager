@@ -1,48 +1,63 @@
-{ config, pkgs, ... }:
-
 {
-  imports = [ ./i3.nix ./zsh.nix];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [./i3.nix ./zsh.nix];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "klst9498";
   home.homeDirectory = "/home/klst9498";
-  
+
   nixpkgs = {
     config = {
       allowUnfree = true;
-      allowUnfreePredicate = (_: true);
+      allowUnfreePredicate = _: true;
     };
   };
 
   # Packages that should be installed to the user profile.
-  home.keyboard.layout= "de";
+  home.keyboard.layout = "de";
 
   home.packages = with pkgs; [
-        autojump
-        feh
-        fzf
-        gnupg
-        jq
-        k3d
-        kustomize
-        source-code-pro
-        terminator
-        thefuck
-        tree
-        vault
-        velero
-        vscode
-        wget
+    alejandra
+    autojump
+    feh
+    fzf
+    fluxcd
+    firefox
+    gnupg
+    jq
+    k3d
+    k9s
+    kustomize
+    kompose
+    kubectl
+    krew
+    kubernetes-helm
+    source-code-pro
+    terminator
+    thefuck
+    tree
+    vault
+    velero
+    vscode
+    wget
   ];
 
+  home.sessionPath = [
+    "$HOME/.krew/bin"
+    "$HOME/.local/bin" # for pipx
+  ];
 
   home.sessionVariables = {
-    EDITOR="nvim";
+    EDITOR = "nvim";
   };
 
   home.shellAliases = {
-	rebuild = "sudo nixos-rebuild switch";
+    # rebuild = "sudo nixos-rebuild switch";
+    rebuild = "";
   };
 
   programs.fzf = {
@@ -53,15 +68,16 @@
   programs.vim = {
     enable = true;
     settings = {
-       relativenumber = true;
-       number = true;
+      relativenumber = true;
+      number = true;
     };
     plugins = with pkgs.vimPlugins; [
       idris-vim
       sensible
       vim-airline
       The_NERD_tree # file system explorer
-      fugitive vim-gitgutter # git 
+      fugitive
+      vim-gitgutter # git
       vim-abolish
       command-t
     ];
@@ -86,7 +102,6 @@
     enableSshSupport = true;
   };
 
-
   programs.git = {
     enable = true;
     userName = "Staudenmaier, Klaus";
@@ -95,5 +110,4 @@
       gst = "status";
     };
   };
-
 }

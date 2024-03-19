@@ -1,20 +1,22 @@
-{ pkgs, lib, ... }:
-
 {
+  pkgs,
+  lib,
+  ...
+}: {
   xsession.windowManager.i3 = {
     enable = true;
     package = pkgs.i3-gaps;
     config = rec {
       modifier = "Mod4";
-      bars = [ ];
-                               
+      bars = [];
+
       window.border = 0;
-                                      
+
       gaps = {
         inner = 15;
         outer = 5;
       };
-                                                                   
+
       keybindings = lib.mkOptionDefault {
         "XF86MonBrightnessDown" = "exec brightnessctl set 4%-";
         "XF86MonBrightnessUp" = "exec brightnessctl set 4%+";
@@ -26,21 +28,21 @@
         "${modifier}+Shift+x" = "exec systemctl suspend";
       };
       startup = [
-      {
-         command = "exec i3-msg workspace 1";
-         always = true;
-         notification = false;
-      }
-      {
-         command = "systemctl --user restart polybar.service";
-         always = true;
-         notification = false;
-      }
-      {
-        command = "${pkgs.feh}/bin/feh --bg-scale ~/.config/home-manager/nix.png";
-        always = true;
-        notification = false;
-      }
+        {
+          command = "exec i3-msg workspace 1";
+          always = true;
+          notification = false;
+        }
+        {
+          command = "systemctl --user restart polybar.service";
+          always = true;
+          notification = false;
+        }
+        {
+          command = "${pkgs.feh}/bin/feh --bg-scale ~/.config/home-manager/nix.png";
+          always = true;
+          notification = false;
+        }
       ];
     };
   };
