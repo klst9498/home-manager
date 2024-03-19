@@ -23,6 +23,7 @@
   home.packages = with pkgs; [
     alejandra
     autojump
+    cue
     feh
     fzf
     fluxcd
@@ -40,6 +41,7 @@
     source-code-pro
     terminator
     thefuck
+    timoni
     tree
     vault
     velero
