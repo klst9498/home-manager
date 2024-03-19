@@ -27,6 +27,7 @@
     fzf
     fluxcd
     firefox
+    gum
     gnupg
     jq
     k3d
