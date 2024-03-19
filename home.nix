@@ -25,9 +25,10 @@
     autojump
     cue
     feh
-    fzf
+    zf
     fluxcd
     firefox
+    go
     gum
     gnupg
     jq
