@@ -56,7 +56,7 @@
   ];
 
   home.sessionVariables = {
-    EDITOR = "nvim -u NONE";
+    EDITOR = "vim";
   };
 
   home.shellAliases = {
