@@ -112,6 +112,8 @@
     userEmail = "klaus.staudenmaier@elektrobit.com";
     aliases = {
       gst = "status";
+      kgpo = "kubectl get pods";
+      kgns = "kubectl get namespacea";
     };
   };
 }
