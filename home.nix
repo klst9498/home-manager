@@ -27,6 +27,7 @@
     feh
     zf
     fluxcd
+    file
     firefox
     go
     gum
