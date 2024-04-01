@@ -59,7 +59,6 @@
 
   home.sessionVariables = {
     EDITOR = "vim";
-    TERMINAL = "alacritty";
   };
 
   home.shellAliases = {
