@@ -21,6 +21,7 @@
   home.keyboard.layout = "de";
 
   home.packages = with pkgs; [
+    alacritty
     alejandra
     autojump
     cue
@@ -58,6 +59,7 @@
 
   home.sessionVariables = {
     EDITOR = "vim";
+    TERMINAL = "alacritty";
   };
 
   home.shellAliases = {
