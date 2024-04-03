@@ -26,6 +26,7 @@
     autojump
     cue
     devpod
+    devspace
     feh
     zf
     fluxcd
