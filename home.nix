@@ -25,6 +25,7 @@
     alejandra
     autojump
     cue
+    devpod
     feh
     zf
     fluxcd
