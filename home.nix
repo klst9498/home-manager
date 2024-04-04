@@ -25,6 +25,7 @@
     alejandra
     autojump
     cue
+    devbox
     devpod
     devspace
     feh
