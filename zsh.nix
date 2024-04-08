@@ -75,4 +75,9 @@
       };
     }
   ];
+
+  programs.bash.shellAliases = {
+    kgpo = "kubectl get pods";
+    kg = "kubectl get";
+  };
 }
