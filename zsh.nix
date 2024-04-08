@@ -76,7 +76,7 @@
     }
   ];
 
-  programs.bash.shellAliases = {
+  programs.zsh.shellAliases = {
     kgpo = "kubectl get pods";
     kg = "kubectl get";
   };
