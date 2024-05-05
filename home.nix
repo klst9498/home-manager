@@ -14,6 +14,7 @@
     config = {
       allowUnfree = true;
       allowUnfreePredicate = _: true;
+      permittedInsecurePackages = ["vault-1.14.10"];
     };
   };
 
@@ -83,7 +84,7 @@
     plugins = with pkgs.vimPlugins; [
       idris-vim
       sensible
-      vim-airline
+      #vim-airline
       The_NERD_tree # file system explorer
       fugitive
       vim-gitgutter # git
