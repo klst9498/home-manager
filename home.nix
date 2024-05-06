@@ -37,6 +37,7 @@
     go
     gum
     gnupg
+    gparted
     jq
     k3d
     k9s
